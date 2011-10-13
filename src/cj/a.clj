@@ -68,6 +68,7 @@
   
   
   (da ns-a ns-aliases)
+  (da ns-r ns-refers)
   
 (da kwd keyword)
 (da sym symbol)
