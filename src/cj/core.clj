@@ -16,9 +16,15 @@
 (defn sh-a [cmd args] (sh-l (apply str (interpose " " (cons cmd args)))))
 
 
+(defn key2str [k] (apply str (rest (str k))))
+
+(defn key2arg [k] (str "-" (key2str k)))
+
+(defn keys2args [l] (map #(if (keyword? %) (key2arg %) %) l))
+
 (do-template
   [cmd]
-  (defn cmd [& args] (sh-a (quote cmd) args))
+  (defn cmd [& args] (sh-a (quote cmd) (keys2args args)))
   
 apt-get
 aptitude
@@ -48,6 +54,7 @@ cp
 cron
 crontab
 csplit
+curl
 cut
 date
 dc
