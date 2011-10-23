@@ -1,0 +1,1 @@
+Make a macro for shell commands which checks if symbols are defined, if they are not, convert to strings

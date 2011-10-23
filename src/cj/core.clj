@@ -95,6 +95,7 @@ function
 fuser
 gawk
 getopts
+sgit
 grep
 groups
 gzip
