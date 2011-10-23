@@ -1,6 +1,6 @@
 # sample
 
-FIXME: write description
+CJ is a lib aimed at increasing entropy in clojure developements (shorter, less error prone and more fun programs)
 
 ## Usage
 

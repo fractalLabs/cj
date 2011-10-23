@@ -1,4 +1,4 @@
-(ns cj.core
+(ns cj.shell
   (:use
     [clojure.contrib.shell :only [sh]]
     [clojure.template :only [do-template]]))
@@ -95,7 +95,7 @@ function
 fuser
 gawk
 getopts
-sgit
+git
 grep
 groups
 gzip
@@ -114,6 +114,7 @@ jobs
 join
 kill
 killall
+lein
 ;let
 ln
 local
