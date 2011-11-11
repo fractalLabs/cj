@@ -4,7 +4,32 @@ CJ is a lib aimed at increasing entropy in clojure developements (shorter, less 
 
 ## Usage
 
-FIXME: write
+Add this dependency to your project.clj: [cj "1.0.0-SNAPSHOT"]
+
+For the shell functions (only thing working ATM):
+
+(use 'cj.shell)
+
+And now you can start doing stuff like:
+
+(ls "~/Desktop")
+
+(ls :la)
+
+(git "status")
+
+(lein "deps")
+
+(wget :H "\"some-header\"" :H "\"another-header, why not\"" "fractalmedia.mx")
+
+Differences between using this bash functions and invoking using sh, i.e. (sh "ls -la")
+
+* If you give more than one argument, they will be concatenated with a space in between.
+
+* If you give a keyword as an argument it will be converted this way: :keyword => -keyword
+
+
+Thats kinda it.
 
 ## License
 
