@@ -4,7 +4,8 @@
     [clojure.template :only [do-template]]))
 
 
-;se puede agregar a sh:  :return-map true
+;se puede agregar a sh:  :return-map true y meterlo como metadata
+;does this really have to be here?
 (defn sh-c
   "Function to pass string as full command to make shell command easier"
   [#^String command]
@@ -60,12 +61,10 @@ date
 dc
 dd
 ddrescue
-;declare
 df
 diff
 diff3
 dig
-;dir
 dircolors
 dirname
 dirs
@@ -76,7 +75,6 @@ egrep
 eject
 enable
 env
-;eval
 exec
 exit
 expect
@@ -87,7 +85,6 @@ fdformat
 fdisk
 fg
 fgrep
-;find
 fmt
 fold
 fsck
@@ -99,7 +96,6 @@ git
 grep
 groups
 gzip
-;hash
 head
 history
 hostname
@@ -108,14 +104,12 @@ id
 ifconfig
 ifdown
 ifup
-;import
 install
 jobs
 join
 kill
 killall
 lein
-;let
 ln
 local
 locate
@@ -148,8 +142,6 @@ paste
 ping
 pkill
 popd
-;pr
-;printf
 ps
 pushd
 pwd
@@ -158,7 +150,6 @@ quotacheck
 quotactl
 ram
 rcp
-;read
 readonly
 rename
 return
@@ -171,15 +162,11 @@ scp
 sdiff
 sed
 select
-;seq
-;set
 shift
 shopt
 shutdown
 sleep
 slocate
-;sort
-;source
 split
 ssh
 su
@@ -187,12 +174,9 @@ sudo
 sum
 suspend
 symlink
-;sync
 tail
 tar
 tee
-;test
-;time
 times
 touch
 top
@@ -200,7 +184,6 @@ traceroute
 tr
 tsort
 tty
-;type
 ulimit
 umask
 unalias
@@ -219,9 +202,9 @@ uudecode
 vmstat
 watch
 wc
+wget
 whereis
 which
-;while
 who
 whoami
 write

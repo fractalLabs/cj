@@ -1,32 +1,23 @@
-(ns cj.a)
+(ns cj.a 
+	(:use [clojure.contrib.def :only [defalias]]))
 
-(comment 
-  "aparentemente tienen que estar cargadas, checar q sean puras d core"
-  "las d otras libs pueden ir en cj.a.nombre-lib"
+
 (defalias da defalias)
+
+
 (da ap apply)
-(da d def)
 (da dn defn)
 (da dm defmacro)
 (da dme defmethod)
-  (da dr defrecord)
-
-
+(da dr defrecord)
 (da hm hash-map)
 (da sm sorted-map)
-  (da hs hash-set)
-  sm-by sorted-map-by
-  reduc reductions
-  
-  trans transient
+(da hs hash-set)
 (da fil filter)
 (da red reduce)
-  (da dis distinct)
-
+(da dis distinct)
 (da lu loop)
-(da rec recur)
 (da ca case)
-
 (da fi first)
 (da sec second)
 (da re rest)
@@ -34,27 +25,43 @@
 (da bla butlast)
 (da cu count)
 
-(da e empty)
 
-;;
+(do-template 
+	[nuevo viejo]
+	(defalias nuevo viejo)
+
+sm-by sorted-map-by
+reduc reductions
+trans transient
+  
+	)
+(comment 
+  "aparentemente tienen que estar cargadas, checar q sean puras d core"
+  "las d otras libs pueden ir en cj.a.nombre-lib"
+(da d def)
+(da rec recur)
+
+
+
+(da e empty)
 (da dr dorun)
-    
-        
 (da e? empty?)
 (da p? pos?)
 (da ne? neg?)
 (da ni? nil?)
 (da num? number?)
-(da subs? substring?)
+;(da subs? substring?)
 (da kwd? keyword?)
   (da f? false?) ;float
   (da t? true?)
 (da vec? vector?)
 (da l? list?)
 (da ins? instance?)
-(da seq? sequential?)
+;yahayseq (da seq? sequential?)
   (da s? string?)
 (da srtd? sorted?)
+
+;hasta aqui he llegado
   rev? reversible
   idem? identical?
   ext? extends?
