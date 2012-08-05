@@ -2,5 +2,4 @@
   :description "Lib aimed at increasing entropy in clojure developements"
   :main cj.shell
   :dependencies [[org.clojure/clojure "1.2.0"]
-                 [org.clojure/clojure-contrib "1.2.0"]]
-  :dev-dependencies [[mycroft/mycroft "0.0.2"]])
+                 [org.clojure/clojure-contrib "1.2.0"]])
