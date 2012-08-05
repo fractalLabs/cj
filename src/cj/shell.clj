@@ -4,8 +4,7 @@
     [clojure.template :only [do-template]]))
 
 
-;se puede agregar a sh:  :return-map true y meterlo como metadata
-;does this really have to be here?
+;boilerplate
 (defn sh-c
   "Function to pass string as full command to make shell command easier"
   [#^String command]
@@ -16,12 +15,14 @@
 
 (defn sh-a [cmd args] (sh-l (apply str (interpose " " (cons cmd args)))))
 
-
+;for converting :args to -args
 (defn key2str [k] (apply str (rest (str k))))
 
 (defn key2arg [k] (str "-" (key2str k)))
 
 (defn keys2args [l] (map #(if (keyword? %) (key2arg %) %) l))
+
+;TODO: se puede agregar a sh:  :return-map true y meterlo como metadata.
 
 (do-template
   [cmd]
