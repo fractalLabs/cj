@@ -1,6 +1,6 @@
 (ns cj.shell
   (:use
-    [clojure.contrib.shell :only [sh]]
+    [clojure.java.shell :only [sh]]
     [clojure.template :only [do-template]]))
 
 
@@ -8,7 +8,7 @@
 (defn sh-c
   "Function to pass string as full command to make shell command easier"
   [#^String command]
-  (sh "/bin/sh" "-c" command))
+  (:out (sh "/bin/sh" "-c" command)))
 
 (defn sh-l [#^String command]
    (re-seq #"[^\n]+" (sh-c command)))
